@@ -245,8 +245,8 @@ function PlacementCellTab() {
             </p>
             <div className="space-y-4 relative z-10">
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                It is a matter of great privilege and immense pleasure for me to be associated with family AGM Rural
-                College of Engineering &amp; Technology. The Students of our college will learn professional and quality
+                It is a matter of great privilege and immense pleasure for me to be associated with A.G.M. College
+                of Engineering and Technology. The Students of our college will learn professional and quality
                 skills besides technical expertise. Our holistic approach stimulates innovation among students by
                 inspiring new ideas with creative thinking.
               </p>

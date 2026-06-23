@@ -304,7 +304,7 @@ export function AboutContent() {
           imageAlt="Acharya Shri 108 Gundhar Nandi Ji Maharaj - Founder"
           tagline="A Message of Vision & Inspiration"
           paragraphs={[
-            "It is a matter of great privilege and immense pleasure for me to be associated with family AGM Rural College of Engineering & Technology. The Students of our college will learn professional and quality skills besides technical expertise. Our holistic approach stimulates innovation among students by inspiring new ideas with creative thinking.",
+            "It is a matter of great privilege and immense pleasure for me to be associated with family A.G.M. College of Engineering and Technology. The Students of our college will learn professional and quality skills besides technical expertise. Our holistic approach stimulates innovation among students by inspiring new ideas with creative thinking.",
             "I extend my best wishes to all the students in reaching their objectives and goals that lead to true success in their career path. I feel proud when our students reach new heights by achieving excellence in academics and lead society and nation in the fore front.",
             '"Motivating students with a sense of purpose is the only way to deliver innovative products and ensure quality to society."',
           ]}
@@ -319,8 +319,8 @@ export function AboutContent() {
           imageAlt="Swasti Shri 105 Bhatarak Pattachrya Swamiji - President"
           tagline="A Message of Excellence & Commitment"
           paragraphs={[
-            "Welcome to A.G.M. Rural College of Engineering and Technology, Varur, a proud institution under the aegis of the prestigious SDM Jain Mutt Group of Institutions. It is our mission to nurture talent, promote innovation, and instill values that shape the engineers of tomorrow.",
-            "At AGMRCET, we believe in providing a holistic educational environment that combines academic excellence with character building. Our Online Grievance Redressal Cell ensures that every stakeholder's voice is heard and addressed impartially, fostering a secure and conducive atmosphere for all-around development.",
+            "Welcome to A.G.M. College of Engineering and Technology, a proud institution under the aegis of the prestigious SDM Jain Mutt Group of Institutions. It is our mission to nurture talent, promote innovation, and instill values that shape the engineers of tomorrow.",
+            "At agmcet, we believe in providing a holistic educational environment that combines academic excellence with character building. Our Online Grievance Redressal Cell ensures that every stakeholder's voice is heard and addressed impartially, fostering a secure and conducive atmosphere for all-around development.",
             "We are committed to empowering our students with the skills and knowledge required to excel in their professional journeys and contribute meaningfully to society. Together, let us strive for greatness and build a brighter future.",
           ]}
         />

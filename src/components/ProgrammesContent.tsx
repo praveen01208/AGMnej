@@ -51,7 +51,7 @@ const BRANCHES: Record<BranchId, BranchData> = {
     name: "Computer Science & Engineering",
     icon: Laptop,
     about:
-      "Welcome to the Department of Computer Science & Engineering. The Department was established in the year 2010 and offers undergraduate program (B.E.) in Computer Science & Engineering with an intake of 60. The department is bound to produce not just skilled engineers but citizens who are responsible towards society. We are a team of highly qualified, experienced & dedicated faculties. Department has sufficient number of Well-equipped laboratories, class rooms & library for imparting quality education.",
+      "Welcome to the Department of Computer Science & Engineering. The Department was established in the year 2026 and offers undergraduate program (B.E.) in Computer Science & Engineering with an intake of 90. The department is bound to produce not just skilled engineers but citizens who are responsible towards society. We are a team of highly qualified, experienced & dedicated faculties. Department has sufficient number of Well-equipped laboratories, class rooms & library for imparting quality education.",
     vision:
       '"To provide quality technical education through innovative approach in the field of Computer Science and Engineering."',
     mission: [
@@ -59,7 +59,7 @@ const BRANCHES: Record<BranchId, BranchData> = {
       "To ensure high quality training to empower knowledge, skills, values to serve the society.",
     ],
     hodMessage: [
-      "It is a matter of great privilege and immense pleasure for me to be associated with family AGM Rural College of Engineering & Technology. The Students of our college will learn professional and quality skills besides technical expertise. Our holistic approach stimulates innovation among students by inspiring new ideas with creative thinking.",
+      "It is a matter of great privilege and immense pleasure for me to be associated with family A.G.M. College of Engineering and Technology. The Students of our college will learn professional and quality skills besides technical expertise. Our holistic approach stimulates innovation among students by inspiring new ideas with creative thinking.",
       "I extend my best wishes to all the students in reaching their objectives and goals that lead to true success in their career path. I feel proud when our students reach new heights by achieving excellence in academics and lead society and nation in the fore front.",
     ],
     hodQuote: "Motivating students with a sense of purpose is the only way to deliver innovate product and insure the quality to society",
@@ -73,7 +73,7 @@ const BRANCHES: Record<BranchId, BranchData> = {
     name: "CSE (Artificial Intelligence & Machine Learning)",
     icon: Brain,
     about:
-      "Welcome to the Department of Computer Science & Engineering (Artificial Intelligence and Machine Learning). The Department was established in the year 2023 and offers undergraduate program (B.E.) in Computer Science & Engineering with an intake of 30. The department is bound to produce not just skilled engineers but citizens who are responsible towards society. We are a team of highly qualified, experienced & dedicated faculties. Department has sufficient number of Well-equipped laboratories, class rooms & library for imparting quality education.",
+      "Welcome to the Department of Computer Science & Engineering (Artificial Intelligence and Machine Learning). The Department was established in the year 2023 and offers undergraduate program (B.E.) in Computer Science & Engineering with an intake of 120. The department is bound to produce not just skilled engineers but citizens who are responsible towards society. We are a team of highly qualified, experienced & dedicated faculties. Department has sufficient number of Well-equipped laboratories, class rooms & library for imparting quality education.",
     vision:
       '"To emerge as a center of excellence in Artificial Intelligence and Machine Learning education, fostering innovation, research, and ethical practices to empower students to shape the future through cutting-edge technologies and impactful solutions."',
     mission: [
@@ -81,7 +81,7 @@ const BRANCHES: Record<BranchId, BranchData> = {
       "To promote a culture of creativity, critical thinking, and research, enabling students to contribute novel solutions to real-world problems using AIML technologies.",
     ],
     hodMessage: [
-      "We are thrilled to announce the establishment of our new (Artificial Intelligence and Machine Learning) Department at A.G.M Rural College of Engineering and Technology. As we continue to evolve in the dynamic landscape of technology, embracing AI and ML becomes not just a necessity but a strategic imperative for our growth and competitiveness by keeping this vision our distinct leader Director Sandeep Kaytanavar added feathers to cap by starting AIML Department.",
+      "We are thrilled to announce the establishment of our new (Artificial Intelligence and Machine Learning) Department at A.G.M. College of Engineering and Technology. As we continue to evolve in the dynamic landscape of technology, embracing AI and ML becomes not just a necessity but a strategic imperative for our growth and competitiveness by keeping this vision our distinct leader Director Sandeep Kaytanavar added feathers to cap by starting AIML Department.",
       "In the AIML Department, we believe in learning by doing. Our state-of-the-art labs and resources provide the platform to experiment, innovate, and turn your ideas into reality. We encourage to question, explore, and, most importantly, to never stop learning.",
     ],
     hodQuote: "Motivating students with a sense of purpose is the only way to deliver innovative products and ensure quality to society",
@@ -95,7 +95,7 @@ const BRANCHES: Record<BranchId, BranchData> = {
     name: "Electronics & Communication Engineering",
     icon: Cpu,
     about:
-      "Department of Electronics & Communication Engineering AGMRCET. has established in the year 2010 with an intake of 60. Department of Electronics and Communication Engineering strives for increasing the knowledge, enhancing the critical thinking, ability to change information into knowledge and power of analyzing the things technically of each and every student in the ever changing society.\n\nWe also intend to impart knowledge through a closed knit family of highly competent faculty. Our Laboratories have been very well established not only to cover complete syllabus but to motivate students to learn beyond the syllabus which definitely develops complete knowledge of the subject (both the practical and theoretical) and develop skill sets of students to become promising engineers in future.",
+      "Department of Electronics & Communication Engineering agmcet. has established in the year 2026 with an intake of 60. Department of Electronics and Communication Engineering strives for increasing the knowledge, enhancing the critical thinking, ability to change information into knowledge and power of analyzing the things technically of each and every student in the ever changing society.\n\nWe also intend to impart knowledge through a closed knit family of highly competent faculty. Our Laboratories have been very well established not only to cover complete syllabus but to motivate students to learn beyond the syllabus which definitely develops complete knowledge of the subject (both the practical and theoretical) and develop skill sets of students to become promising engineers in future.",
     vision:
       '"To achieve immeasurable growth towards technical education in the field of Electronics and communication engineering."',
     mission: [
@@ -103,7 +103,7 @@ const BRANCHES: Record<BranchId, BranchData> = {
       "To practice innovative teaching and learning in the field of engineering and communication engineering.",
     ],
     hodMessage: [
-      "The Electronics and Communication (E&C) Engineering Department was established in the year 2010. The department has highly qualified faculty members with Ph.Ds. in diverse fields. The faculty focus on molding quality engineers who are capable of making great contributions for a better tomorrow. The department has state-of-the-art laboratories for enabling students to pursue their desire for attaining excellence in research and academics. The facilities encourage students to have hands-on training in modern engineering tools.",
+      "The Electronics and Communication (E&C) Engineering Department was established in the year 2026. The department has highly qualified faculty members with Ph.Ds. in diverse fields. The faculty focus on molding quality engineers who are capable of making great contributions for a better tomorrow. The department has state-of-the-art laboratories for enabling students to pursue their desire for attaining excellence in research and academics. The facilities encourage students to have hands-on training in modern engineering tools.",
       "The department regularly organizes seminars, guest lectures, short-term training programs and workshops for the professional development of students and faculty within and beyond the institute. Furthermore, the department strives to develop collaborative research and development linkages with leading organizations in India and abroad.",
     ],
     hodQuote: "Motivating students with a sense of purpose is the only way to deliver innovative products and ensure quality to society",
@@ -117,7 +117,7 @@ const BRANCHES: Record<BranchId, BranchData> = {
     name: "Civil Engineering",
     icon: Building,
     about:
-      "The Department of Civil Engineering was established in 2010 with an intake of 60. The Department of Civil Engineering strives for increasing knowledge, enhancing critical thinking, ability to change information into knowledge and power of analysing the things technically of each and every student in the ever changing society.\n\nWe also intend to impart knowledge through a close-knit family of highly competent faculty. Our laboratories have been very well established not only to cover the complete syllabus but to motivate students to learn beyond the syllabus, which definitely develops complete knowledge of the subject (both practical and theoretical) and develop the skill sets of students to become promising engineers in future.",
+      "The Department of Civil Engineering was established in 2026 with an intake of 30. The Department of Civil Engineering strives for increasing knowledge, enhancing critical thinking, ability to change information into knowledge and power of analysing the things technically of each and every student in the ever changing society.\n\nWe also intend to impart knowledge through a close-knit family of highly competent faculty. Our laboratories have been very well established not only to cover the complete syllabus but to motivate students to learn beyond the syllabus, which definitely develops complete knowledge of the subject (both practical and theoretical) and develop the skill sets of students to become promising engineers in future.",
     vision:
       '"To be an eminent department in order to transmit valuable technical education, producing civil engineers who are brilliant, innovative, and professionally competent with a social conscience responsibility and ethical standards to serve the nation."',
     mission: [
@@ -125,7 +125,7 @@ const BRANCHES: Record<BranchId, BranchData> = {
       "To ensconce budding civil engineers to be entrepreneurs and pursue higher education in reputed institutions.",
     ],
     hodMessage: [
-      "It is a matter of great privilege and immense pleasure for me to be associated with family AGM Rural College of Engineering & Technology. The Students of our college will learn professional and quality skills besides technical expertise. Our holistic approach stimulates innovation among students by inspiring new ideas with creative thinking.",
+      "It is a matter of great privilege and immense pleasure for me to be associated with family A.G.M. College of Engineering and Technology. The Students of our college will learn professional and quality skills besides technical expertise. Our holistic approach stimulates innovation among students by inspiring new ideas with creative thinking.",
       "I extend my best wishes to all the students in reaching their objectives and goals that lead to true success in their career path. I feel proud when our students reach new heights by achieving excellence in academics and lead society and nation in the fore front.",
     ],
     hodQuote: "Motivating students with a sense of purpose is the only way to deliver innovative products and ensure quality to society",

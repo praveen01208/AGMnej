@@ -414,6 +414,11 @@ export function Hero() {
           <h2 className="text-xl md:text-4xl font-serif italic text-slate-700 mb-4">
             Admissions Open for B.E. Course 2026-27
           </h2>
+          <div className="flex justify-center mb-6">
+            <div className="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-gradient-to-r from-[#fdfaf3] to-[#f9f2d4] border border-[#d4af37]/40 text-[#0a192f] font-bold text-sm sm:text-base uppercase tracking-[0.2em] shadow-sm">
+              CET-CODE: E327
+            </div>
+          </div>
           <p className="text-slate-600 max-w-3xl mx-auto mb-6 text-sm md:text-base leading-relaxed">
             Join the radiant beacon of hope for technical excellence. Affiliated to Visvesvaraya Technological University, Belagavi. Approved by AICTE, New Delhi. Recognised by Government of Karnataka.
           </p>

@@ -88,7 +88,7 @@ const CONTACT_ITEMS = [
     icon: MapPin,
     label: "Address",
     value: "Nej-Shamanewadi\nTq: Chikkodi, Dist: Belagavi\nKarnataka - 591239",
-    href: "https://www.google.com/maps/search/Nej-Shamanewadi+Tq:+Chikkodi,+Dist:+Belagavi+Karnataka+-+591239/@16.5437762,74.4814357,14z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D",
+    href: "https://www.google.com/maps/place/16°31'10.0%22N+74°30'01.5%22E/@16.5194423,74.4978532,17z/data=!3m1!4b1!4m4!3m3!8m2!3d16.5194423!4d74.5004281?hl=en&entry=ttu&g_ep=EgoyMDI2MDYyMS4wIKXMDSoASAFQAw%3D%3D",
     highlight: false,
   },
 ];
@@ -235,10 +235,10 @@ function EnquiryForm() {
 
 // ── Map Card ─────────────────────────────────────────────────────────────────
 const MAPS_URL =
-  "https://www.google.com/maps/search/Nej-Shamanewadi+Tq:+Chikkodi,+Dist:+Belagavi+Karnataka+-+591239/@16.5437762,74.4814357,14z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D";
+  "https://www.google.com/maps/place/16°31'10.0%22N+74°30'01.5%22E/@16.5194423,74.4978532,17z/data=!3m1!4b1!4m4!3m3!8m2!3d16.5194423!4d74.5004281?hl=en&entry=ttu&g_ep=EgoyMDI2MDYyMS4wIKXMDSoASAFQAw%3D%3D";
 
 const MAPS_EMBED =
-  "https://www.google.com/maps?q=16.5437762,74.4814357&z=14&output=embed";
+  "https://www.google.com/maps?q=16.5194423,74.5004281&z=17&output=embed";
 
 function MapCard() {
   return (
