@@ -73,7 +73,7 @@ const BRANCHES: Record<BranchId, BranchData> = {
     name: "CSE (Artificial Intelligence & Machine Learning)",
     icon: Brain,
     about:
-      "Welcome to the Department of Computer Science & Engineering (Artificial Intelligence and Machine Learning). The Department was established in the year 2023 and offers undergraduate program (B.E.) in Computer Science & Engineering with an intake of 120. The department is bound to produce not just skilled engineers but citizens who are responsible towards society. We are a team of highly qualified, experienced & dedicated faculties. Department has sufficient number of Well-equipped laboratories, class rooms & library for imparting quality education.",
+      "Welcome to the Department of Computer Science & Engineering (Artificial Intelligence and Machine Learning). The Department was established in the year 2026 and offers undergraduate program (B.E.) in Computer Science & Engineering with an intake of 120. The department is bound to produce not just skilled engineers but citizens who are responsible towards society. We are a team of highly qualified, experienced & dedicated faculties. Department has sufficient number of Well-equipped laboratories, class rooms & library for imparting quality education.",
     vision:
       '"To emerge as a center of excellence in Artificial Intelligence and Machine Learning education, fostering innovation, research, and ethical practices to empower students to shape the future through cutting-edge technologies and impactful solutions."',
     mission: [
@@ -166,7 +166,7 @@ function HeroBanner({ activeTab }: { activeTab: BranchId }) {
         }}
       />
       <div className="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-[#d4af37]/10 to-transparent pointer-events-none" />
-      
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative py-10 sm:py-14">
         <Breadcrumb activeTab={activeTab} />
         <h1 className="mt-6 text-3xl sm:text-5xl lg:text-6xl font-serif font-extrabold text-white uppercase leading-none tracking-tight">
@@ -190,11 +190,10 @@ function TabBar({ activeTab, onSelect }: { activeTab: BranchId; onSelect: (t: Br
               <button
                 key={key}
                 onClick={() => onSelect(key)}
-                className={`shrink-0 flex items-center gap-2 px-5 sm:px-8 py-4 text-xs sm:text-sm font-bold uppercase tracking-widest border-b-2 transition-all duration-300 whitespace-nowrap ${
-                  activeTab === key
+                className={`shrink-0 flex items-center gap-2 px-5 sm:px-8 py-4 text-xs sm:text-sm font-bold uppercase tracking-widest border-b-2 transition-all duration-300 whitespace-nowrap ${activeTab === key
                     ? "border-[#d4af37] text-[#0a192f]"
                     : "border-transparent text-slate-400 hover:text-[#0a192f] hover:border-slate-200"
-                }`}
+                  }`}
               >
                 <Icon className="w-4 h-4 shrink-0" />
                 {shortName}
@@ -247,10 +246,10 @@ function ProgrammesContentInner() {
     <>
       <HeroBanner activeTab={activeTab} />
       <TabBar activeTab={activeTab} onSelect={handleTabChange} />
-      
+
       <div className="py-14 bg-slate-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl space-y-16">
-          
+
           {/* About Department */}
           <div className="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
             <div className="h-1 w-full bg-gradient-to-r from-[#d4af37] to-[#0a192f]" />
@@ -266,7 +265,7 @@ function ProgrammesContentInner() {
           <div>
             <SectionHeading>Vision &amp; Mission</SectionHeading>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              
+
               {/* Vision Card */}
               <div className="bg-[#0a192f] rounded-2xl p-6 sm:p-8 relative overflow-hidden shadow-md group hover:-translate-y-1 transition-transform duration-300">
                 <div className="absolute right-0 top-0 w-32 h-32 bg-[#d4af37]/5 rounded-bl-full pointer-events-none" />
@@ -318,7 +317,7 @@ function ProgrammesContentInner() {
 
           {/* POs & PSOs - Tabbed view or Accordion style lists */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
-            
+
             {/* PSOs taking 1/3 width or full width, let's stack PSOs then POs */}
             <div className="lg:col-span-12">
               <SectionHeading>Program Specific Outcomes (PSOs)</SectionHeading>
