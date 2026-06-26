@@ -566,7 +566,7 @@ export function Hero() {
           <div className="flex items-center gap-3 mb-10">
             <div className="w-1 h-8 bg-[#d4af37] rounded-full" />
             <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-[#0a192f] tracking-tight">
-              Why <span className="text-[#d4af37]">AGM</span>
+              Why <span className="text-[#d4af37]">AGM ?</span>
             </h2>
           </div>
 
