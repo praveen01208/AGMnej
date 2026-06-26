@@ -558,6 +558,46 @@ export function Hero() {
         </div>
       </section>
 
+      {/* ── Why AGM Section ── */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+
+          {/* Section heading */}
+          <div className="flex items-center gap-3 mb-10">
+            <div className="w-1 h-8 bg-[#d4af37] rounded-full" />
+            <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-[#0a192f] tracking-tight">
+              Why <span className="text-[#d4af37]">AGM</span>
+            </h2>
+          </div>
+
+          {/* SVG Container — premium card with hover effects */}
+          <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-slate-100 bg-gradient-to-br from-slate-50 via-white to-slate-50">
+            {/* Decorative top gold accent bar */}
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#d4af37] via-[#d4af37]/60 to-[#0a192f] z-10" />
+
+            {/* Subtle corner glow */}
+            <div className="absolute -top-20 -right-20 w-60 h-60 bg-[#d4af37]/5 rounded-full blur-3xl pointer-events-none group-hover:bg-[#d4af37]/10 transition-all duration-700" />
+            <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-[#0a192f]/5 rounded-full blur-3xl pointer-events-none group-hover:bg-[#0a192f]/10 transition-all duration-700" />
+
+            {/* SVG Image */}
+            <div className="relative p-4 sm:p-6 lg:p-8">
+              <Image
+                src="/images/whyagm.svg"
+                alt="Why choose A.G.M College of Engineering and Technology — key advantages and unique features"
+                width={6912}
+                height={3456}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1280px"
+                className="w-full h-auto object-contain rounded-xl transition-transform duration-700 group-hover:scale-[1.01]"
+                priority={false}
+              />
+            </div>
+
+            {/* Decorative bottom gold accent bar */}
+            <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#0a192f] via-[#d4af37]/60 to-[#d4af37] z-10" />
+          </div>
+        </div>
+      </section>
+
       {/* ── Rotating Messages Section ── */}
       <RotatingMessagesSection />
 
