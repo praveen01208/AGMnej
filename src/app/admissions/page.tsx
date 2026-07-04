@@ -19,7 +19,6 @@ export const metadata: Metadata = {
     images: [{ url: "/images/banner.jpeg", width: 1200, height: 630, alt: "AGMCET Admissions" }],
     locale: "en_IN",
     type: "website",
-    modifiedTime: new Date().toISOString(),
   },
   twitter: {
     card: "summary_large_image",

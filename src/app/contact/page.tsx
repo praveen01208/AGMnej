@@ -19,7 +19,6 @@ export const metadata: Metadata = {
     images: [{ url: "/images/story.png", width: 1200, height: 630, alt: "Contact AGMCET" }],
     locale: "en_IN",
     type: "website",
-    modifiedTime: new Date().toISOString(),
   },
   twitter: {
     card: "summary_large_image",
