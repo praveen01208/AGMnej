@@ -62,6 +62,10 @@ function HeroBanner({ activeTab }: { activeTab: Tab }) {
         <h1 className="mt-6 text-4xl sm:text-6xl lg:text-7xl font-serif font-extrabold text-white uppercase leading-none tracking-tight">
           {label}
         </h1>
+        <div className="mt-8 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-[10px] uppercase tracking-widest font-bold">
+          <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+          Last Updated: July 2026
+        </div>
       </div>
     </div>
   );
@@ -122,6 +126,14 @@ function AdmissionProcedureTab() {
   return (
     <div className="py-14 bg-slate-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl space-y-14">
+
+        {/* Quick Facts / AI Summary Block */}
+        <div className="bg-[#0a192f] rounded-2xl p-6 sm:p-8 shadow-md border-l-4 border-[#d4af37]">
+          <h2 className="text-[#d4af37] text-xs font-bold uppercase tracking-widest mb-3">Quick Facts / Admission Summary</h2>
+          <p className="text-white text-sm sm:text-base leading-relaxed">
+            AGMCET Admissions for 2026 are open. Eligibility requires a 10+2 passing certificate with Physics and Mathematics (45% minimum) and a valid score in Karnataka Common Entrance Test (KCET), Consortium of Medical, Engineering and Dental Colleges of Karnataka (COMEDK), or All India Engineering Entrance Examination (AIEEE). We offer Bachelor of Engineering (B.E.) programs in Computer Science (CSE), Artificial Intelligence & Machine Learning (AI & ML), Electronics & Communication (ECE), and Civil Engineering.
+          </p>
+        </div>
 
         {/* Requirement */}
         <div>
@@ -197,6 +209,74 @@ function AdmissionProcedureTab() {
               <p className="text-slate-300 text-xs leading-relaxed">{item.desc}</p>
             </div>
           ))}
+        </div>
+
+        {/* FAQ Section (AEO) */}
+        <div>
+          <SectionHeading>Frequently Asked Questions</SectionHeading>
+          
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "How do I apply for B.E. at AGMCET?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "You can apply by appearing for the Karnataka CET or COMEDK exams. For management quota, you can fill out our online admission enquiry form or apply via AIEEE."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What is the eligibility for CSE at AGMCET?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "You must have passed 12th standard (PUC) with Physics and Mathematics as compulsory subjects along with Chemistry/Bio-Technology/Computer Science, securing a minimum of 45% aggregate (40% for reserved categories)."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Does AGMCET offer lateral entry admissions?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Yes, students who have passed an Engineering Diploma examination with a minimum of 45% aggregate can apply for direct admission to the 2nd year (3rd semester) via the DCET exam."
+                    }
+                  }
+                ]
+              })
+            }}
+          />
+
+          <div className="space-y-4">
+            {[
+              {
+                q: "How do I apply for B.E. at AGMCET?",
+                a: "You can apply by appearing for the Karnataka CET or COMEDK exams. For management quota, you can fill out our online admission enquiry form or apply via AIEEE.",
+              },
+              {
+                q: "What is the eligibility for CSE at AGMCET?",
+                a: "You must have passed 12th standard (PUC) with Physics and Mathematics as compulsory subjects along with Chemistry/Bio-Technology/Computer Science, securing a minimum of 45% aggregate (40% for reserved categories).",
+              },
+              {
+                q: "Does AGMCET offer lateral entry admissions?",
+                a: "Yes, students who have passed an Engineering Diploma examination with a minimum of 45% aggregate can apply for direct admission to the 2nd year (3rd semester) via the DCET exam.",
+              },
+            ].map((faq, idx) => (
+              <details key={idx} className="group bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden open:ring-2 open:ring-[#d4af37]/50 transition-all">
+                <summary className="px-6 py-4 font-bold text-[#0a192f] cursor-pointer flex justify-between items-center bg-slate-50 group-open:bg-white transition-colors">
+                  {faq.q}
+                  <span className="text-[#d4af37] text-xl group-open:rotate-45 transition-transform duration-300">+</span>
+                </summary>
+                <div className="px-6 py-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 bg-white">
+                  {faq.a}
+                </div>
+              </details>
+            ))}
+          </div>
         </div>
 
       </div>

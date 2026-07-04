@@ -172,6 +172,10 @@ function HeroBanner({ activeTab }: { activeTab: BranchId }) {
         <h1 className="mt-6 text-3xl sm:text-5xl lg:text-6xl font-serif font-extrabold text-white uppercase leading-none tracking-tight">
           {branch.name}
         </h1>
+        <div className="mt-8 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-[10px] uppercase tracking-widest font-bold">
+          <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+          Last Updated: July 2026
+        </div>
       </div>
     </div>
   );
@@ -249,6 +253,14 @@ function ProgrammesContentInner() {
 
       <div className="py-14 bg-slate-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl space-y-16">
+
+          {/* Quick Facts / AI Summary Block */}
+          <div className="bg-[#0a192f] rounded-2xl p-6 sm:p-8 shadow-md border-l-4 border-[#d4af37]">
+            <h2 className="text-[#d4af37] text-xs font-bold uppercase tracking-widest mb-3">Quick Facts</h2>
+            <p className="text-white text-sm sm:text-base leading-relaxed">
+              AGMCET offers 4 Bachelor of Engineering (B.E.) programs: Computer Science (90 intake), Artificial Intelligence & Machine Learning (120 intake), Electronics & Communication (60 intake), and Civil Engineering (30 intake). All programs are affiliated with Visvesvaraya Technological University (VTU) and approved by the All India Council for Technical Education (AICTE).
+            </p>
+          </div>
 
           {/* About Department */}
           <div className="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">

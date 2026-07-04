@@ -69,6 +69,10 @@ function HeroBanner({ activeTab }: { activeTab: Tab }) {
         <h1 className="mt-6 text-4xl sm:text-6xl lg:text-7xl font-serif font-extrabold text-white uppercase leading-none tracking-tight">
           {label}
         </h1>
+        <div className="mt-8 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-[10px] uppercase tracking-widest font-bold">
+          <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+          Last Updated: July 2026
+        </div>
       </div>
     </div>
   );
@@ -151,7 +155,7 @@ function AboutUsContent() {
               </div>
               <h2 className="text-xs font-bold tracking-widest uppercase text-[#d4af37] mb-3">Our Vision</h2>
               <p className="text-white text-base sm:text-lg leading-relaxed font-serif">
-                To impart quality technical education for young minds and empower the rural sectors by synergizing comprehensive education with social responsibility and ethical values to serve the nation.
+                To impart quality technical education for young minds at <strong className="text-[#d4af37]">A.G.M College of Engineering and Technology, Chikodi</strong> and empower the rural sectors by synergizing comprehensive education with social responsibility and ethical values to serve the nation.
               </p>
             </div>
           </div>
@@ -227,6 +231,21 @@ function MessageContent({
   return (
     <div className="py-16 bg-slate-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": name,
+              "jobTitle": role,
+              "affiliation": {
+                "@type": "EducationalOrganization",
+                "name": "A.G.M College of Engineering and Technology, Chikodi"
+              }
+            })
+          }}
+        />
 
         {/* Label */}
         <p className="text-[#d4af37] text-[10px] font-bold tracking-[0.2em] uppercase mb-3">{role}</p>

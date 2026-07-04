@@ -14,24 +14,42 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
+export const viewport = {
+  themeColor: "#0a192f",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export const metadata: Metadata = {
-  title: "A.G.M College of Engineering and Technology",
-  description: "Admissions open for B.E. courses at A.G.M College of Engineering and Technology. Affiliated to VTU, Belagavi and Approved by AICTE, New Delhi.",
-  keywords: ["AGM College", "Engineering", "Technology", "Belagavi", "VTU", "Admissions 2026", "B.E. Course", "Gunadhar Teerth", "Shamanewadi"],
+  title: "AGMCET - AGM College of Engineering and Technology, Chikodi",
+  description: "Welcome to AGMCET - AGM College of Engineering and Technology in Chikodi. Explore top B.E. courses, admissions 2026, modern infrastructure, and excellent placements.",
+  keywords: ["AGMCET", "AGM", "Chikodi engineering college", "AGM College of Engineering and Technology", "Best engineering college in Chikodi", "AGMCET Belagavi", "VTU affiliated college Chikodi"],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   alternates: {
-    canonical: "https://www.agmcollege.edu.in", // Placeholder URL
+    canonical: "https://www.agmcet.edu.in", 
   },
   openGraph: {
-    title: "A.G.M College of Engineering and Technology",
-    description: "Admissions open for B.E. courses. Modern infrastructure, affordable fees, and high salary packages.",
-    url: "https://www.agmcollege.edu.in",
-    siteName: "A.G.M College of Engineering and Technology",
+    title: "AGMCET - AGM College of Engineering and Technology, Chikodi",
+    description: "Welcome to AGMCET - AGM College of Engineering and Technology in Chikodi. Explore top B.E. courses, admissions 2026, modern infrastructure, and excellent placements.",
+    url: "https://www.agmcet.edu.in",
+    siteName: "AGMCET - A.G.M College of Engineering and Technology",
     images: [
       {
-        url: "/images/banner.jpeg", // Placeholder for OG Image
+        url: "/images/banner.jpeg", 
         width: 1200,
         height: 630,
-        alt: "A.G.M College of Engineering and Technology Campus",
+        alt: "AGMCET Campus - AGM College of Engineering and Technology Chikodi",
       },
     ],
     locale: "en_IN",
@@ -39,9 +57,25 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "A.G.M College of Engineering and Technology",
-    description: "Admissions open for B.E. courses. Modern infrastructure, affordable fees, and high salary packages.",
+    title: "AGMCET - AGM College of Engineering and Technology, Chikodi",
+    description: "Welcome to AGMCET - AGM College of Engineering and Technology in Chikodi. Explore top B.E. courses, admissions 2026, modern infrastructure, and excellent placements.",
     images: ["/images/banner.jpeg"],
+  },
+  icons: {
+    icon: [
+      { url: '/logo.png', sizes: '32x32', type: 'image/png' },
+      { url: '/logo.png', sizes: '192x192', type: 'image/png' },
+      { url: '/logo.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/logo.png', sizes: '180x180', type: 'image/png' },
+    ],
+    other: [
+      {
+        rel: 'mask-icon',
+        url: '/logo.png',
+      },
+    ],
   },
 };
 
@@ -59,25 +93,103 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "EducationalOrganization",
-              name: "A.G.M College of Engineering and Technology",
-              url: "https://www.agmcollege.edu.in",
-              logo: "https://www.agmcollege.edu.in/logo.png",
-              address: {
+              "name": "AGMCET - A.G.M College of Engineering and Technology",
+              "alternateName": ["AGM", "Chikodi engineering college", "AGM College"],
+              "url": "https://www.agmcet.edu.in",
+              "logo": "https://www.agmcet.edu.in/logo.png",
+              "image": "https://www.agmcet.edu.in/images/story.png",
+              "description": "AGMCET is a premier engineering college in Chikodi, Karnataka, affiliated with VTU Belagavi and approved by AICTE.",
+              "address": {
                 "@type": "PostalAddress",
-                streetAddress: "Nej-Shamanewadi",
-                addressLocality: "Chikkodi",
-                addressRegion: "Karnataka",
-                postalCode: "591239",
-                addressCountry: "IN"
+                "streetAddress": "Nej-Shamanewadi",
+                "addressLocality": "Chikodi",
+                "addressRegion": "Karnataka",
+                "postalCode": "591239",
+                "addressCountry": "IN"
               },
-              sameAs: [
-                "https://www.facebook.com/agmcollege",
-                "https://twitter.com/agmcollege",
-                "https://www.linkedin.com/school/agmcollege"
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+91-0000000000",
+                "contactType": "Admissions",
+                "areaServed": "IN",
+                "availableLanguage": ["English", "Kannada", "Hindi"]
+              },
+              "sameAs": [
+                "https://www.facebook.com/placeholder-agm",
+                "https://www.instagram.com/placeholder-agm",
+                "https://www.linkedin.com/school/placeholder-agm",
+                "https://www.youtube.com/c/placeholder-agm"
               ]
             })
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "AGMCET - A.G.M College of Engineering and Technology",
+              "url": "https://www.agmcet.edu.in",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://www.agmcet.edu.in/search?q={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
+              }
+            })
+          }}
+        />
+        {/* Google Analytics - Controlled via Env Variable */}
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <>
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`} />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
+                    page_path: window.location.pathname,
+                  });
+                `,
+              }}
+            />
+          </>
+        )}
+        
+        {/* Google Tag Manager */}
+        {process.env.NEXT_PUBLIC_GTM_ID && (
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','${process.env.NEXT_PUBLIC_GTM_ID}');
+              `,
+            }}
+          />
+        )}
+
+        {/* Microsoft Clarity */}
+        {process.env.NEXT_PUBLIC_CLARITY_ID && (
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function(c,l,a,r,i,t,y){
+                    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                })(window, document, "clarity", "script", "${process.env.NEXT_PUBLIC_CLARITY_ID}");
+              `,
+            }}
+          />
+        )}
       </head>
       <body className="font-sans antialiased text-slate-900 bg-slate-50 min-h-screen flex flex-col">
         {children}

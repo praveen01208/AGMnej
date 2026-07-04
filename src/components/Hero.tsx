@@ -410,6 +410,7 @@ export function Hero() {
           <p className="text-[#d4af37] font-bold tracking-widest uppercase mb-4 text-sm">S.D.M. Jainmatt Trust®</p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5.5rem] font-serif text-[#0a192f] mb-4 leading-none uppercase">
             A.G.M College of <br className="hidden md:block"/> Engineering & Technology
+            <span className="sr-only">, Chikodi</span>
           </h1>
           <h2 className="text-xl md:text-4xl font-serif italic text-slate-700 mb-4">
             Admissions Open for B.E. Course 2026-27
@@ -492,7 +493,7 @@ export function Hero() {
               <div className="relative overflow-hidden rounded-2xl shadow-xl bg-slate-200 flex items-center justify-center">
                 <Image
                   src="/images/story.png"
-                  alt="A.G.M College Campus"
+                  alt="AGMCET Campus - AGM College of Engineering and Technology Chikodi"
                   width={1920}
                   height={1080}
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -500,7 +501,7 @@ export function Hero() {
                 />
                 <Image
                   src="/images/desk.png"
-                  alt="A.G.M College Campus"
+                  alt="AGMCET Campus - AGM College of Engineering and Technology Chikodi"
                   width={1920}
                   height={1080}
                   sizes="(max-width: 768px) 100vw, 50vw"
