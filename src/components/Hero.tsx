@@ -21,16 +21,27 @@ const PROGRAMMES = [
   },
   { 
     name: "Electronics &\nCommunication\nEngineering", 
-    image: "https://images.unsplash.com/photo-1592503254549-270505c2e915?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop",
     intake: 60,
     href: "/programmes?branch=ece"
   },
   { 
     name: "Civil\nEngineering", 
-    image: "https://images.unsplash.com/photo-1541888086225-ee531980315f?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop",
     intake: 30,
     href: "/programmes?branch=civil"
   },
+];
+
+const FACULTIES = [
+  { name: "Vaishnav Vasant Shegale", role: "Assistant Professor, CSE", image: "/images/faculty/vaishnav.jpg" },
+  { name: "Dr. Sanjay Ankali", role: "Professor, CSE", image: "/images/faculty/sanjay.jpg" },
+  { name: "K.R. Patil", role: "Assistant Professor, Physics", image: "/images/faculty/krpatil.jpg" },
+  { name: "Ravi Walke", role: "Physical Director, Sports", image: "/images/faculty/ravi.jpg" },
+  { name: "Ashwini Pharalad", role: "Assistant Professor, CSE", image: "/images/faculty/ashwini.jpg" },
+  { name: "Rani Siddappa Suture", role: "CSE Department", image: "/images/faculty/rani.jpg" },
+  { name: "Dr. Sachin Mekkalike", role: "Associate Professor, Mathematics", image: "/images/faculty/sachin.jpg" },
+  { name: "Dr. Shashikant Walki", role: "Associate Professor, Engg. Chemistry", image: "/images/faculty/shashikant.jpg" }
 ];
 
 const BENTO_FEATURES = [
@@ -671,6 +682,35 @@ export function Hero() {
             >
               <ChevronRight className="w-7 h-7" />
             </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Faculty Corner Section */}
+      <section className="py-24 bg-white overflow-hidden border-t border-slate-100">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-12 text-center">
+            <h2 className="text-sm font-bold text-[#d4af37] tracking-widest uppercase mb-3">Our Core Team</h2>
+            <p className="text-3xl md:text-5xl font-serif font-bold text-[#0a192f] leading-tight">
+              Faculty Corner
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {FACULTIES.map((faculty, idx) => (
+              <div key={idx} className="group flex flex-col items-center bg-slate-50 rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div className="relative w-32 h-32 mb-6 rounded-full overflow-hidden border-4 border-white shadow-lg group-hover:border-[#d4af37] transition-colors duration-300">
+                  <Image 
+                    src={faculty.image} 
+                    alt={faculty.name}
+                    fill
+                    className="object-cover"
+                    sizes="128px"
+                  />
+                </div>
+                <h3 className="text-lg font-bold text-[#0a192f] text-center mb-1">{faculty.name}</h3>
+                <p className="text-sm text-slate-500 text-center">{faculty.role}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
