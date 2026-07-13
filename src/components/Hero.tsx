@@ -695,22 +695,43 @@ export function Hero() {
               Faculty Corner
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {FACULTIES.map((faculty, idx) => (
-              <div key={idx} className="group flex flex-col items-center bg-slate-50 rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300">
-                <div className="relative w-32 h-32 mb-6 rounded-full overflow-hidden border-4 border-white shadow-lg group-hover:border-[#d4af37] transition-colors duration-300">
-                  <Image 
-                    src={faculty.image} 
-                    alt={faculty.name}
-                    fill
-                    className="object-cover"
-                    sizes="128px"
-                  />
-                </div>
-                <h3 className="text-lg font-bold text-[#0a192f] text-center mb-1">{faculty.name}</h3>
-                <p className="text-sm text-slate-500 text-center">{faculty.role}</p>
+          <div className="flex relative mt-8 md:mt-12 w-full overflow-hidden before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-[40px] md:before:w-[60px] before:bg-gradient-to-r before:from-white before:to-transparent after:absolute after:right-0 after:top-0 after:z-10 after:h-full after:w-[40px] md:after:w-[60px] after:bg-gradient-to-l after:from-white after:to-transparent py-4">
+            <div className="flex animate-scroll-left items-center w-max hover:[animation-play-state:paused]">
+              <div className="flex items-center gap-8 pr-8">
+                {FACULTIES.map((faculty, idx) => (
+                  <div key={`f1-${idx}`} className="w-[280px] flex-shrink-0 group flex flex-col items-center bg-slate-50 rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div className="relative w-32 h-32 mb-6 rounded-full overflow-hidden border-4 border-white shadow-lg group-hover:border-[#d4af37] transition-colors duration-300">
+                      <Image 
+                        src={faculty.image} 
+                        alt={faculty.name}
+                        fill
+                        className="object-cover"
+                        sizes="128px"
+                      />
+                    </div>
+                    <h3 className="text-lg font-bold text-[#0a192f] text-center mb-1">{faculty.name}</h3>
+                    <p className="text-sm text-slate-500 text-center">{faculty.role}</p>
+                  </div>
+                ))}
               </div>
-            ))}
+              <div className="flex items-center gap-8 pr-8">
+                {FACULTIES.map((faculty, idx) => (
+                  <div key={`f2-${idx}`} className="w-[280px] flex-shrink-0 group flex flex-col items-center bg-slate-50 rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div className="relative w-32 h-32 mb-6 rounded-full overflow-hidden border-4 border-white shadow-lg group-hover:border-[#d4af37] transition-colors duration-300">
+                      <Image 
+                        src={faculty.image} 
+                        alt={faculty.name}
+                        fill
+                        className="object-cover"
+                        sizes="128px"
+                      />
+                    </div>
+                    <h3 className="text-lg font-bold text-[#0a192f] text-center mb-1">{faculty.name}</h3>
+                    <p className="text-sm text-slate-500 text-center">{faculty.role}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>

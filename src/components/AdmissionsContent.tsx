@@ -390,7 +390,7 @@ function EligibilityTab() {
 
         <p className="text-slate-500 text-sm sm:text-base leading-relaxed bg-white border border-slate-100 rounded-xl p-5 shadow-sm">
           Academic eligibility to seek admission to B.E. / B.Tech. programmes — applicable for the academic year{" "}
-          <span className="font-bold text-[#0a192f]">2021-22 onwards</span> as specified below.
+          <span className="font-bold text-[#0a192f]">2026-27 onwards</span> as specified below.
         </p>
 
         {ELIGIBILITY_BLOCKS.map((block, bi) => (
