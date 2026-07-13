@@ -4,6 +4,7 @@ export const NAV_LINKS = [
   { name: "Programmes", href: "/programmes" },
   { name: "Admissions", href: "/admissions" },
   { name: "Placement", href: "/placement" },
+  { name: "Administration", href: "/admin/login" },
   { name: "Contact", href: "/contact" },
 ];
 

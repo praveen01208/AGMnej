@@ -47,7 +47,7 @@ export function Header() {
               <div key={link.name} className="relative group h-full flex items-center">
                 <Link
                   href={link.href}
-                  className={`text-[#0a192f] text-[13px] font-bold uppercase tracking-widest hover:text-[#d4af37] transition-colors py-8 flex items-center gap-1 ${link.name === "Programmes" ? "text-[#d4af37] border-b-2 border-[#d4af37]" : ""}`}
+                  className={`text-[#0a192f] text-[13px] font-bold uppercase tracking-widest hover:text-[#d4af37] transition-colors py-8 flex items-center gap-1 ${(link.name === "Programmes" || link.name === "Administration") ? "text-[#d4af37] group-hover:border-[#d4af37]" : ""}`}
                 >
                   {link.name}
                 </Link>
@@ -83,6 +83,33 @@ export function Header() {
                       <div className="mt-8 pt-5 border-t border-slate-100">
                         <Link href="/programmes" className="text-[10px] font-bold text-[#d4af37] uppercase tracking-widest hover:text-[#0a192f] transition-colors flex items-center gap-2">
                           Explore All <ArrowRight className="w-3 h-3" />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                )}
+                
+                {/* Mega Menu for Administration */}
+                {link.name === "Administration" && (
+                  <div className="absolute top-full left-0 w-[300px] bg-white shadow-[0_15px_40px_rgb(0,0,0,0.08)] border-t border-[#d4af37] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-8">
+                    <div className="flex flex-col">
+                      <div className="flex items-center gap-3 mb-6">
+                        <div className="w-4 h-[2px] bg-[#d4af37]" />
+                        <h4 className="text-xs font-bold tracking-widest text-[#0a192f] uppercase">Portals</h4>
+                      </div>
+                      
+                      <div className="flex flex-col space-y-5">
+                        <Link href="/admin/login" className="group/link flex flex-col">
+                          <span className="text-[#0a192f] font-bold group-hover/link:text-[#d4af37] transition-colors">Admin</span>
+                          <span className="text-[11px] text-slate-500 mt-1">College administration</span>
+                        </Link>
+                        <Link href="/faculty" className="group/link flex flex-col">
+                          <span className="text-[#0a192f] font-bold group-hover/link:text-[#d4af37] transition-colors">Faculty Corner</span>
+                          <span className="text-[11px] text-slate-500 mt-1">Meet our core team</span>
+                        </Link>
+                        <Link href="/hrms" className="group/link flex flex-col">
+                          <span className="text-[#0a192f] font-bold group-hover/link:text-[#d4af37] transition-colors">HRMS</span>
+                          <span className="text-[11px] text-slate-500 mt-1">Staff portal & management</span>
                         </Link>
                       </div>
                     </div>

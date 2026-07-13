@@ -47,10 +47,17 @@ export default function AdminLogin() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a192f] flex flex-col justify-center py-12 sm:px-6 lg:px-8 relative overflow-hidden">
-      {/* Background decorations */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[500px] opacity-20 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#d4af37]/20 to-transparent blur-3xl rounded-full" />
+    <div className="min-h-screen flex flex-col justify-center py-12 sm:px-6 lg:px-8 relative overflow-hidden bg-[#0a192f]">
+      {/* Background Image with Smoke Overlay */}
+      <div className="absolute inset-0 z-0">
+        <Image 
+          src="/images/desk.png" 
+          alt="Admin Background" 
+          fill 
+          className="object-cover object-center opacity-30 grayscale mix-blend-luminosity" 
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a192f]/80 via-[#0a192f]/90 to-[#0a192f] shadow-[inset_0_0_100px_rgba(0,0,0,0.8)]" />
       </div>
 
       <div className="sm:mx-auto sm:w-full sm:max-w-md relative z-10">

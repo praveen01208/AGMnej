@@ -34,14 +34,14 @@ const PROGRAMMES = [
 ];
 
 const FACULTIES = [
-  { name: "Vaishnav Vasant Shegale", role: "Assistant Professor, CSE", image: "/images/faculty/vaishnav.jpg" },
+  { name: "Vaishnav Vasant Shegale", role: "Assistant Professor, CSE", image: "/images/faculty/vaishnav.png" },
   { name: "Dr. Sanjay Ankali", role: "Professor, CSE", image: "/images/faculty/sanjay.jpg" },
-  { name: "K.R. Patil", role: "Assistant Professor, Physics", image: "/images/faculty/krpatil.jpg" },
-  { name: "Ravi Walke", role: "Physical Director, Sports", image: "/images/faculty/ravi.jpg" },
+  { name: "K.R. Patil", role: "Assistant Professor, Physics", image: "/images/faculty/krpatil.png" },
+  { name: "Ravi Walke", role: "Physical Director, Sports", image: "/images/faculty/ravi.jpeg" },
   { name: "Ashwini Pharalad", role: "Assistant Professor, CSE", image: "/images/faculty/ashwini.jpg" },
   { name: "Rani Siddappa Suture", role: "CSE Department", image: "/images/faculty/rani.jpg" },
-  { name: "Dr. Sachin Mekkalike", role: "Associate Professor, Mathematics", image: "/images/faculty/sachin.jpg" },
-  { name: "Dr. Shashikant Walki", role: "Associate Professor, Engg. Chemistry", image: "/images/faculty/shashikant.jpg" }
+  { name: "Dr. Sachin Mekkalike", role: "Associate Professor, Mathematics", image: "/images/faculty/sachin.png" },
+  { name: "Dr. Shashikant Walki", role: "Associate Professor, Engg. Chemistry", image: "/images/faculty/shashikant.png" }
 ];
 
 const BENTO_FEATURES = [
