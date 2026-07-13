@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
@@ -14,7 +14,7 @@ const PROGRAMMES = [
     href: "/programmes?branch=cse"
   },
   { 
-    name: "CSE - Artificial Intelligence\nAnd Machine Learning", 
+    name: "Artificial Intelligence\n& Machine Learning", 
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop",
     intake: 120,
     href: "/programmes?branch=aiml"
@@ -114,7 +114,7 @@ const INNOVATION_LOGOS_BOTTOM = [
   "/logos/7.jpg", "/logos/8.jpeg", "/logos/9.jpeg"
 ];
 
-// ── Rotating Messages data ──────────────────────────────────────────────────
+// â”€â”€ Rotating Messages data â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const MESSAGES = [
   {
     role: "Founder's Message",
@@ -249,7 +249,7 @@ function RotatingMessagesSection() {
                     />
                   ))}
                   <Link href="/about" className="ml-auto text-[10px] font-bold uppercase tracking-widest text-[#d4af37] hover:text-[#0a192f] transition-colors">
-                    Read Full Message →
+                    Read Full Message â†’
                   </Link>
                 </div>
               </div>
@@ -262,35 +262,35 @@ function RotatingMessagesSection() {
   );
 }
 
-// ── Admissions Quick-Links section ─────────────────────────────────────────
+// â”€â”€ Admissions Quick-Links section â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const ADMISSION_ITEMS = [
   {
     number: "01",
     title: "Admission Procedure",
-    desc: "CET / ComedK / AIEEE — as per Karnataka State Govt. regulations.",
+    desc: "CET / ComedK / AIEEE â€” as per Karnataka State Govt. regulations.",
     href: "/admissions",
-    icon: "📋",
+    icon: "ðŸ“‹",
   },
   {
     number: "02",
     title: "Intake",
-    desc: "300+ seats across 4 B.E. programmes — CSE, AI&ML, ECE, Civil.",
+    desc: "300+ seats across 4 B.E. programmes â€” CSE, AI&ML, ECE, Civil.",
     href: "/admissions",
-    icon: "🎓",
+    icon: "ðŸŽ“",
   },
   {
     number: "03",
     title: "Eligibility Criteria",
     desc: "10+2 PCM with CET/ComedK for 1st year; Diploma with DCET for lateral.",
     href: "/admissions",
-    icon: "✅",
+    icon: "âœ…",
   },
   {
     number: "04",
     title: "Admission Enquiry",
     desc: "Fill our quick enquiry form and our counsellors will reach out within 24 hrs.",
     href: "/admissions",
-    icon: "💬",
+    icon: "ðŸ’¬",
   },
 ];
 
@@ -304,7 +304,7 @@ function AdmissionsSection() {
 
     const onScroll = () => {
       const { top } = el.getBoundingClientRect();
-      // Once the section top has scrolled past the top of the viewport → apply the effect
+      // Once the section top has scrolled past the top of the viewport â†’ apply the effect
       setScrolled(top < 0);
     };
 
@@ -329,7 +329,7 @@ function AdmissionsSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
         {/* Header */}
         <div className="mb-12">
-          <h2 className="text-sm font-bold text-[#d4af37] tracking-widest uppercase mb-3">Admissions 2026–27</h2>
+          <h2 className="text-sm font-bold text-[#d4af37] tracking-widest uppercase mb-3">Admissions 2026â€“27</h2>
           <p className="text-3xl md:text-5xl font-serif font-bold text-white leading-tight">
             Your Journey Starts Here
           </p>
@@ -407,7 +407,7 @@ export function Hero() {
       {/* Top Text Section (Matches Spice Garden Layout Reference) */}
       <section className="pt-6 lg:pt-10 pb-4 text-center">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-          <p className="text-[#d4af37] font-bold tracking-widest uppercase mb-4 text-sm">S.D.M. Jainmatt Trust®</p>
+          <p className="text-[#d4af37] font-bold tracking-widest uppercase mb-4 text-sm">S.D.M. Jainmatt TrustÂ®</p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5.5rem] font-serif text-[#0a192f] mb-4 leading-none uppercase">
             A.G.M College of <br className="hidden md:block"/> Engineering & Technology
             <span className="sr-only">, Chikodi</span>
@@ -473,7 +473,7 @@ export function Hero() {
         </div>
       </section>
 
-      {/* ── Our Story Section ── */}
+      {/* â”€â”€ Our Story Section â”€â”€ */}
       <section id="our-story" className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
 
@@ -488,7 +488,7 @@ export function Hero() {
           {/* Two-column layout */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
-            {/* Left — Campus Image */}
+            {/* Left â€” Campus Image */}
             <div className="relative w-full">
               <div className="relative overflow-hidden rounded-2xl shadow-xl bg-slate-200 flex items-center justify-center">
                 <Image
@@ -524,14 +524,14 @@ export function Hero() {
               </div>
             </div>
 
-            {/* Right — Text content */}
+            {/* Right â€” Text content */}
             <div className="flex flex-col lg:pt-4">
               {/* overline */}
               <p className="text-[#d4af37] text-[10px] font-bold tracking-[0.2em] uppercase mb-5">
                 Empowering rural Karnataka through quality education
               </p>
 
-              {/* Body text — split into two readable paragraphs */}
+              {/* Body text â€” split into two readable paragraphs */}
               <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-5">
                 Our institution is committed to delivering quality technical education that empowers young minds and contributes to the growth of society, particularly in rural communities. We strive to nurture future technocrats through innovative teaching methodologies, practical learning experiences, and a strong foundation of professionalism, ethics, and social responsibility.
               </p>
@@ -539,7 +539,7 @@ export function Hero() {
                 By fostering critical thinking, problem-solving abilities, and technical excellence, we prepare students to address real-world challenges. Through student-centric learning, modern technological tools, and collaborative teamwork, we inspire innovation, academic excellence, and meaningful contributions to both the engineering profession and society at large.
               </p>
 
-              {/* CTA link — styled like the reference image */}
+              {/* CTA link â€” styled like the reference image */}
               <div className="flex items-center gap-8">
                 <a
                   href="/about"
@@ -559,7 +559,7 @@ export function Hero() {
         </div>
       </section>
 
-      {/* ── Why AGM Section ── */}
+      {/* â”€â”€ Why AGM Section â”€â”€ */}
       <section className="py-16 sm:py-20 lg:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
 
@@ -571,7 +571,7 @@ export function Hero() {
             </h2>
           </div>
 
-          {/* SVG Container — premium card with hover effects */}
+          {/* SVG Container â€” premium card with hover effects */}
           <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-slate-100 bg-gradient-to-br from-slate-50 via-white to-slate-50">
             {/* Decorative top gold accent bar */}
             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#d4af37] via-[#d4af37]/60 to-[#0a192f] z-10" />
@@ -584,7 +584,7 @@ export function Hero() {
             <div className="relative p-4 sm:p-6 lg:p-8">
               <Image
                 src="/images/whyagm.svg"
-                alt="Why choose A.G.M College of Engineering and Technology — key advantages and unique features"
+                alt="Why choose A.G.M College of Engineering and Technology â€” key advantages and unique features"
                 width={6912}
                 height={3456}
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1280px"
@@ -599,7 +599,7 @@ export function Hero() {
         </div>
       </section>
 
-      {/* ── Rotating Messages Section ── */}
+      {/* â”€â”€ Rotating Messages Section â”€â”€ */}
       <RotatingMessagesSection />
 
       {/* Academic Programmes Section (Smoky Carousel) */}
@@ -625,31 +625,27 @@ export function Hero() {
               <Link
                 href={prog.href}
                 key={index} 
-                className="group relative min-w-[320px] w-[85vw] sm:min-w-[400px] sm:w-[450px] lg:min-w-0 lg:w-full h-[450px] lg:h-[550px] shrink-0 snap-start rounded-[1.5rem] overflow-hidden shadow-lg border border-slate-100 cursor-pointer bg-white block"
+                className="group flex flex-col min-w-[320px] w-[85vw] sm:min-w-[400px] sm:w-[450px] lg:min-w-0 lg:w-full h-[450px] lg:h-[550px] shrink-0 snap-start rounded-[1.5rem] overflow-hidden shadow-lg border border-slate-100 cursor-pointer bg-white"
               >
-                {/* Full Background Image */}
-                <Image
-                  src={prog.image}
-                  alt={prog.name.replace('\n', ' ')}
-                  fill
-                  className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 450px, 25vw"
-                />
+                {/* Image Section (70% height) */}
+                <div className="relative h-[70%] w-full overflow-hidden">
+                  <Image
+                    src={prog.image}
+                    alt={prog.name.replace('\n', ' ')}
+                    fill
+                    className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 450px, 25vw"
+                  />
+                </div>
                 
-                {/* Smoky White Overlay (Fades on hover) */}
-                <div className="absolute inset-0 bg-gradient-to-t from-white/85 via-white/50 to-transparent transition-opacity duration-500 group-hover:opacity-0" />
-                
-                {/* Hover Dark Overlay (Appears on hover to keep text readable and invert theme) */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a192f]/90 via-[#0a192f]/40 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-
-                {/* Card Content */}
-                <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-10 lg:p-6 z-10">
-                  <h3 className="text-3xl lg:text-3xl xl:text-[34px] font-black italic uppercase leading-none tracking-tighter text-[#d4af37] drop-shadow-sm transition-colors duration-500 group-hover:text-white mb-6 whitespace-pre-line">
+                {/* Text Section (30% height) */}
+                <div className="h-[30%] w-full flex flex-col justify-center p-6 bg-white group-hover:bg-[#0a192f] transition-colors duration-500 border-t border-slate-100">
+                  <h3 className="text-xl sm:text-2xl xl:text-[26px] font-black italic uppercase leading-none tracking-tighter text-[#0a192f] group-hover:text-white mb-auto whitespace-pre-line transition-colors duration-500">
                     {prog.name}
                   </h3>
                   
-                  <div className="pt-5 border-t border-slate-300 group-hover:border-white/20 flex items-center gap-2 mt-auto transition-colors duration-500">
-                    <span className="text-[#d4af37] text-[11px] xl:text-[12px] font-extrabold tracking-widest uppercase transition-colors duration-500">
+                  <div className="flex items-center gap-2 mt-4">
+                    <span className="text-[#d4af37] text-[11px] xl:text-[12px] font-extrabold tracking-widest uppercase">
                       Explore Programme
                     </span>
                     <ArrowRight className="w-4 h-4 text-[#d4af37] transition-transform duration-500 group-hover:translate-x-2" />
@@ -737,7 +733,7 @@ export function Hero() {
         </div>
       </section>
 
-      {/* ── Admissions Quick-Links Section ── */}
+      {/* â”€â”€ Admissions Quick-Links Section â”€â”€ */}
       <AdmissionsSection />
 
       {/* Transport Section */}
@@ -954,7 +950,7 @@ export function Hero() {
   );
 }
 
-// ── Custom Video Component ──────────────────────────────────────────────────
+// â”€â”€ Custom Video Component â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function VideoCard() {
   const cursorRef = useRef<HTMLDivElement>(null);
   const [isMuted, setIsMuted] = useState(true);

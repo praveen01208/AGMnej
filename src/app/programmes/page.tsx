@@ -54,7 +54,7 @@ export default function ProgrammesPage() {
                   "position": 2,
                   "item": {
                     "@type": "Course",
-                    "name": "B.E. in CSE - Artificial Intelligence and Machine Learning",
+                    "name": "B.E. in Artificial Intelligence and Machine Learning",
                     "provider": { "@type": "EducationalOrganization", "name": "AGMCET" }
                   }
                 },

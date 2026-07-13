@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect, Suspense } from "react";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
@@ -15,7 +15,7 @@ import {
   Lightbulb,
 } from "lucide-react";
 
-// ── Shared Data ───────────────────────────────────────────────────────────────
+// â”€â”€ Shared Data â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const COMMON_POS = [
   { id: "PO1", title: "Engineering knowledge", desc: "Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization to the solution of complex engineering problems." },
   { id: "PO2", title: "Problem analysis", desc: "Identify, formulate, review research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences." },
@@ -27,7 +27,7 @@ const COMMON_POS = [
   { id: "PO8", title: "Ethics", desc: "Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice." },
   { id: "PO9", title: "Individual and team work", desc: "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings." },
   { id: "PO10", title: "Communication", desc: "Communicate effectively on complex engineering activities with the engineering community and with society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions." },
-  { id: "PO11", title: "Project management and finance", desc: "Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments." },
+  { id: "PO11", title: "Project management and finance", desc: "Demonstrate knowledge and understanding of the engineering and management principles and apply these to oneâ€™s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments." },
   { id: "PO12", title: "Life-long learning", desc: "Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change." },
 ];
 
@@ -70,10 +70,10 @@ const BRANCHES: Record<BranchId, BranchData> = {
   },
   aiml: {
     id: "aiml",
-    name: "CSE (Artificial Intelligence & Machine Learning)",
+    name: "Artificial Intelligence & Machine Learning",
     icon: Brain,
     about:
-      "Welcome to the Department of Computer Science & Engineering (Artificial Intelligence and Machine Learning). The Department was established in the year 2026 and offers undergraduate program (B.E.) in Computer Science & Engineering with an intake of 120. The department is bound to produce not just skilled engineers but citizens who are responsible towards society. We are a team of highly qualified, experienced & dedicated faculties. Department has sufficient number of Well-equipped laboratories, class rooms & library for imparting quality education.",
+      "Welcome to the Department of Artificial Intelligence and Machine Learning. The Department was established in the year 2026 and offers undergraduate program (B.E.) in Computer Science & Engineering with an intake of 120. The department is bound to produce not just skilled engineers but citizens who are responsible towards society. We are a team of highly qualified, experienced & dedicated faculties. Department has sufficient number of Well-equipped laboratories, class rooms & library for imparting quality education.",
     vision:
       '"To emerge as a center of excellence in Artificial Intelligence and Machine Learning education, fostering innovation, research, and ethical practices to empower students to shape the future through cutting-edge technologies and impactful solutions."',
     mission: [
@@ -138,7 +138,7 @@ const BRANCHES: Record<BranchId, BranchData> = {
 
 const TAB_KEYS: BranchId[] = ["cse", "aiml", "ece", "civil"];
 
-// ── UI Components ─────────────────────────────────────────────────────────────
+// â”€â”€ UI Components â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 function Breadcrumb({ activeTab }: { activeTab: BranchId }) {
   return (
@@ -219,7 +219,7 @@ function SectionHeading({ children }: { children: React.ReactNode }) {
   );
 }
 
-// ── Branch Content ────────────────────────────────────────────────────────────
+// â”€â”€ Branch Content â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function ProgrammesContentInner() {
   const router = useRouter();
   const pathname = usePathname();
