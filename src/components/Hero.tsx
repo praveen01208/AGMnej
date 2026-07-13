@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
@@ -9,25 +9,25 @@ import { ArrowRight, BookOpen, Building2, Briefcase, Award, Users, Library, Tren
 const PROGRAMMES = [
   { 
     name: "Computer Science And\nEngineering", 
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800&auto=format&fit=crop",
     intake: 90,
     href: "/programmes?branch=cse"
   },
   { 
     name: "Artificial Intelligence\n& Machine Learning", 
-    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=800&auto=format&fit=crop",
     intake: 120,
     href: "/programmes?branch=aiml"
   },
   { 
     name: "Electronics &\nCommunication\nEngineering", 
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1592503254549-270505c2e915?q=80&w=800&auto=format&fit=crop",
     intake: 60,
     href: "/programmes?branch=ece"
   },
   { 
     name: "Civil\nEngineering", 
-    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1541888086225-ee531980315f?q=80&w=800&auto=format&fit=crop",
     intake: 30,
     href: "/programmes?branch=civil"
   },
