@@ -91,7 +91,7 @@ export function Header() {
                 
                 {/* Mega Menu for Administration */}
                 {link.name === "Administration" && (
-                  <div className="absolute top-full left-0 w-[300px] bg-white shadow-[0_15px_40px_rgb(0,0,0,0.08)] border-t border-[#d4af37] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-8">
+                  <div className="absolute top-full right-0 w-[300px] bg-white shadow-[0_15px_40px_rgb(0,0,0,0.08)] border-t border-[#d4af37] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-8">
                     <div className="flex flex-col">
                       <div className="flex items-center gap-3 mb-6">
                         <div className="w-4 h-[2px] bg-[#d4af37]" />

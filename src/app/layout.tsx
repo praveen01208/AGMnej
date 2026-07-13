@@ -191,7 +191,7 @@ export default function RootLayout({
           />
         )}
       </head>
-      <body className="font-sans antialiased text-slate-900 bg-slate-50 min-h-screen flex flex-col">
+      <body className="font-sans antialiased text-slate-900 bg-slate-50 min-h-screen flex flex-col overflow-x-hidden">
         {children}
       </body>
     </html>
