@@ -13,7 +13,7 @@ const NAV_LINKS = [
   { name: "Admissions", href: "/admissions" },
   { name: "Placement", href: "/placement" },
   { name: "Contact", href: "/contact" },
-  { name: "Admin", href: "/admin/login" },
+  { name: "Administration", href: "/admin/login" },
 ];
 
 export function Header() {
