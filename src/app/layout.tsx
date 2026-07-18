@@ -107,18 +107,32 @@ export default function RootLayout({
                 "postalCode": "591239",
                 "addressCountry": "IN"
               },
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+91-0000000000",
-                "contactType": "Admissions",
-                "areaServed": "IN",
-                "availableLanguage": ["English", "Kannada", "Hindi"]
+              "telephone": "+91-76193-55570",
+              "email": "principalagmcet@gmail.com",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 16.4331,
+                "longitude": 74.5892
               },
+              "contactPoint": [
+                {
+                  "@type": "ContactPoint",
+                  "telephone": "+91-76193-55570",
+                  "contactType": "Admissions",
+                  "areaServed": "IN",
+                  "availableLanguage": ["English", "Kannada", "Hindi"]
+                },
+                {
+                  "@type": "ContactPoint",
+                  "telephone": "+91-91087-90808",
+                  "contactType": "Customer Service",
+                  "areaServed": "IN",
+                  "availableLanguage": ["English", "Kannada", "Hindi"]
+                }
+              ],
               "sameAs": [
-                "https://www.facebook.com/placeholder-agm",
-                "https://www.instagram.com/placeholder-agm",
-                "https://www.linkedin.com/school/placeholder-agm",
-                "https://www.youtube.com/c/placeholder-agm"
+                "https://www.instagram.com/agmcet_shamanewadi",
+                "https://www.linkedin.com/in/agmcet-engineering-college-b99520423"
               ]
             })
           }}
@@ -130,14 +144,13 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               "name": "AGMCET - A.G.M College of Engineering and Technology",
+              "alternateName": "AGMCET",
               "url": "https://www.agmcet.edu.in",
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": {
-                  "@type": "EntryPoint",
-                  "urlTemplate": "https://www.agmcet.edu.in/search?q={search_term_string}"
-                },
-                "query-input": "required name=search_term_string"
+              "inLanguage": "en-IN",
+              "publisher": {
+                "@type": "EducationalOrganization",
+                "name": "AGMCET - A.G.M College of Engineering and Technology",
+                "url": "https://www.agmcet.edu.in"
               }
             })
           }}
