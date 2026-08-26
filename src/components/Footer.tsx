@@ -125,7 +125,7 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-2.5">
                 <Smartphone className="w-3.5 h-3.5 text-[#d4af37] shrink-0" />
-                <a href="tel:+917619355570" className="hover:text-[#d4af37] transition-colors">+91 76193 55570</a>
+                <a href="tel:+917619235570" className="hover:text-[#d4af37] transition-colors">+91 76193 55570</a>
               </div>
               <div className="flex items-center gap-2.5">
                 <Smartphone className="w-3.5 h-3.5 text-[#d4af37] shrink-0" />
@@ -170,9 +170,8 @@ export function Footer() {
                         onClick={(e) => {
                           if (link.href === "#") e.preventDefault();
                         }}
-                        className={`group flex items-center gap-1 transition-colors duration-300 w-max text-xs ${
-                          link.href === "#" ? "text-slate-500 cursor-default" : "text-slate-400 hover:text-[#d4af37]"
-                        }`}
+                        className={`group flex items-center gap-1 transition-colors duration-300 w-max text-xs ${link.href === "#" ? "text-slate-500 cursor-default" : "text-slate-400 hover:text-[#d4af37]"
+                          }`}
                       >
                         <span>{link.label}</span>
                         {link.href !== "#" && (

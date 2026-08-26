@@ -67,7 +67,7 @@ const CONTACT_ITEMS = [
     icon: Smartphone,
     label: "Contact 1",
     value: "+91 76193 55570",
-    href: "tel:+917619355570",
+    href: "tel:+917619235570",
     highlight: true,
   },
   {
@@ -330,33 +330,29 @@ export function ContactContent() {
                         href={item.href}
                         target={item.label === "Address" ? "_blank" : undefined}
                         rel={item.label === "Address" ? "noopener noreferrer" : undefined}
-                        className={`group flex items-start gap-4 rounded-2xl p-5 border transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md ${
-                          item.highlight
+                        className={`group flex items-start gap-4 rounded-2xl p-5 border transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md ${item.highlight
                             ? "bg-[#0a192f] border-[#d4af37]/20 hover:border-[#d4af37]/50"
                             : "bg-white border-slate-100 hover:border-[#d4af37]/30"
-                        }`}
+                          }`}
                       >
                         <div
-                          className={`shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-xl transition-colors duration-300 ${
-                            item.highlight
+                          className={`shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-xl transition-colors duration-300 ${item.highlight
                               ? "bg-[#d4af37]/10 text-[#d4af37] group-hover:bg-[#d4af37] group-hover:text-white"
                               : "bg-[#0a192f]/5 text-[#0a192f] group-hover:bg-[#d4af37] group-hover:text-white"
-                          }`}
+                            }`}
                         >
                           <Icon className="w-5 h-5" />
                         </div>
                         <div className="min-w-0">
                           <p
-                            className={`text-[10px] font-bold tracking-widest uppercase mb-1 ${
-                              item.highlight ? "text-[#d4af37]" : "text-slate-400"
-                            }`}
+                            className={`text-[10px] font-bold tracking-widest uppercase mb-1 ${item.highlight ? "text-[#d4af37]" : "text-slate-400"
+                              }`}
                           >
                             {item.label}
                           </p>
                           <p
-                            className={`text-sm font-semibold leading-snug break-words whitespace-pre-line ${
-                              item.highlight ? "text-white" : "text-[#0a192f]"
-                            }`}
+                            className={`text-sm font-semibold leading-snug break-words whitespace-pre-line ${item.highlight ? "text-white" : "text-[#0a192f]"
+                              }`}
                           >
                             {item.value}
                           </p>
