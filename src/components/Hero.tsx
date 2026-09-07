@@ -41,7 +41,9 @@ const FACULTIES = [
   { name: "Ashwini Pharalad", role: "Assistant Professor, CSE", image: "/images/faculty/ashwini.jpg" },
   { name: "Rani Siddappa Suture", role: "CSE Department", image: "/images/faculty/rani.jpg" },
   { name: "Dr. Sachin Mekkalike", role: "Associate Professor, Mathematics", image: "/images/faculty/sachin.png" },
-  { name: "Dr. Shashikant Walki", role: "Associate Professor, Engg. Chemistry", image: "/images/faculty/shashikant.png" }
+  { name: "Dr. Shashikant Walki", role: "Associate Professor, Engg. Chemistry", image: "/images/faculty/shashikant.png" },
+  { name: "Ullas Jayakumar Maisale", role: "Assistant Professor, ECE", image: "/images/faculty/jayakumar.png" },
+  { name: "Sagar Sudhakar Birade", role: "Assistant Professor, ECE", image: "/images/faculty/sudhakar.png" }
 ];
 
 const BENTO_FEATURES = [

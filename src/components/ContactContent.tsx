@@ -66,7 +66,7 @@ const CONTACT_ITEMS = [
   {
     icon: Smartphone,
     label: "Contact 1",
-    value: "+91 76193 55570",
+    value: "+91 76192 35570",
     href: "tel:+917619235570",
     highlight: true,
   },

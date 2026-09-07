@@ -107,7 +107,7 @@ export default function RootLayout({
                 "postalCode": "591239",
                 "addressCountry": "IN"
               },
-              "telephone": "+91-76193-55570",
+              "telephone": "+91-76192-35570",
               "email": "principalagmcet@gmail.com",
               "geo": {
                 "@type": "GeoCoordinates",
@@ -117,7 +117,7 @@ export default function RootLayout({
               "contactPoint": [
                 {
                   "@type": "ContactPoint",
-                  "telephone": "+91-76193-55570",
+                  "telephone": "+91-76192-35570",
                   "contactType": "Admissions",
                   "areaServed": "IN",
                   "availableLanguage": ["English", "Kannada", "Hindi"]

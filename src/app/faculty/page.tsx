@@ -63,6 +63,20 @@ const FACULTIES = [
     phone: "8105787069",
     role: "Associate Professor, Engg. Chemistry", 
     image: "/images/faculty/shashikant.png" 
+  },
+  { 
+    name: "Ullas Jayakumar Maisale", 
+    email: "principalagmcet@gmail.com",
+    phone: "7619235570",
+    role: "Assistant Professor, Department of ECE", 
+    image: "/images/faculty/jayakumar.png" 
+  },
+  { 
+    name: "Sagar Sudhakar Birade", 
+    email: "principalagmcet@gmail.com",
+    phone: "7619235570",
+    role: "Assistant Professor, Department of ECE", 
+    image: "/images/faculty/sudhakar.png" 
   }
 ];
 
@@ -107,23 +121,27 @@ export default function FacultyCorner() {
                 </div>
 
                 <div className="w-full space-y-3 mt-auto">
-                  <a href={`mailto:${faculty.email}`} className="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 border border-transparent hover:border-slate-100 transition-colors text-left group/contact">
-                    <div className="w-8 h-8 rounded-full bg-[#0a192f]/5 flex items-center justify-center shrink-0 group-hover/contact:bg-[#0a192f]/10 transition-colors">
-                      <Mail className="w-4 h-4 text-[#0a192f]" />
-                    </div>
-                    <div className="truncate text-sm text-slate-600 font-medium">
-                      {faculty.email}
-                    </div>
-                  </a>
+                  {faculty.email && (
+                    <a href={`mailto:${faculty.email}`} className="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 border border-transparent hover:border-slate-100 transition-colors text-left group/contact">
+                      <div className="w-8 h-8 rounded-full bg-[#0a192f]/5 flex items-center justify-center shrink-0 group-hover/contact:bg-[#0a192f]/10 transition-colors">
+                        <Mail className="w-4 h-4 text-[#0a192f]" />
+                      </div>
+                      <div className="truncate text-sm text-slate-600 font-medium">
+                        {faculty.email}
+                      </div>
+                    </a>
+                  )}
 
-                  <a href={`tel:${faculty.phone}`} className="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 border border-transparent hover:border-slate-100 transition-colors text-left group/contact">
-                    <div className="w-8 h-8 rounded-full bg-[#0a192f]/5 flex items-center justify-center shrink-0 group-hover/contact:bg-[#0a192f]/10 transition-colors">
-                      <Phone className="w-4 h-4 text-[#0a192f]" />
-                    </div>
-                    <div className="truncate text-sm text-slate-600 font-medium">
-                      +91 {faculty.phone}
-                    </div>
-                  </a>
+                  {faculty.phone && (
+                    <a href={`tel:${faculty.phone}`} className="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 border border-transparent hover:border-slate-100 transition-colors text-left group/contact">
+                      <div className="w-8 h-8 rounded-full bg-[#0a192f]/5 flex items-center justify-center shrink-0 group-hover/contact:bg-[#0a192f]/10 transition-colors">
+                        <Phone className="w-4 h-4 text-[#0a192f]" />
+                      </div>
+                      <div className="truncate text-sm text-slate-600 font-medium">
+                        +91 {faculty.phone}
+                      </div>
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
