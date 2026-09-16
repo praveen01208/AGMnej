@@ -66,15 +66,15 @@ const FACULTIES = [
   },
   { 
     name: "Ullas Jayakumar Maisale", 
-    email: "principalagmcet@gmail.com",
-    phone: "7619235570",
+    email: "ullas.maisale@gmail.com",
+    phone: "9739751254",
     role: "Assistant Professor, Department of ECE", 
     image: "/images/faculty/jayakumar.png" 
   },
   { 
     name: "Sagar Sudhakar Birade", 
-    email: "principalagmcet@gmail.com",
-    phone: "7619235570",
+    email: "sagarbirade7@gmail.com",
+    phone: "9945105480",
     role: "Assistant Professor, Department of ECE", 
     image: "/images/faculty/sudhakar.png" 
   }
