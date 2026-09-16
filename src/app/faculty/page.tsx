@@ -77,6 +77,20 @@ const FACULTIES = [
     phone: "9945105480",
     role: "Assistant Professor, Department of ECE", 
     image: "/images/faculty/sudhakar.png" 
+  },
+  { 
+    name: "Ashwini M. Kempayyanavar", 
+    email: "ashwini150591@gmail.com",
+    phone: "7338284859",
+    role: "Department of Mathematics", 
+    image: "/images/faculty/ashwinik.png" 
+  },
+  { 
+    name: "Prashant S Shedbalkar", 
+    email: "pshedbalkar@gmail.com",
+    phone: "6361853427",
+    role: "Department of Mechanical", 
+    image: "/images/faculty/prashants.png" 
   }
 ];
 
