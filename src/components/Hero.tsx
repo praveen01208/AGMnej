@@ -1105,7 +1105,7 @@ function EventsHighlightsSection() {
 
             {/* Highlights Narrative */}
             <p className="text-slate-600 text-xs sm:text-base max-w-2xl mt-2.5 sm:mt-3 leading-relaxed">
-              Explore key moments and vibrant campus life at AGMR. Our latest highlights showcase the welcoming of new engineering students during the Induction Program alongside our humanitarian Blood Donation Camp organized by students and faculty.
+              Explore key moments and vibrant campus life at AGMCET. Our latest highlights showcase the welcoming of new engineering students during the Induction Program alongside our humanitarian Blood Donation Camp organized by students and faculty.
             </p>
           </div>
 
