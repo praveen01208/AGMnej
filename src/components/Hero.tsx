@@ -4,7 +4,7 @@ import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, BookOpen, Building2, Briefcase, Award, Users, Library, TrendingUp, Shield, Map, Star, Laptop, Trophy, ChevronLeft, ChevronRight, Volume2, VolumeX } from "lucide-react";
+import { ArrowRight, BookOpen, Building2, Briefcase, Award, Users, Library, TrendingUp, Shield, Map, Star, Laptop, Trophy, ChevronLeft, ChevronRight, Calendar, Sparkles, Heart, Eye, X, Pause, Play } from "lucide-react";
 
 const PROGRAMMES = [
   { 
@@ -471,10 +471,8 @@ export function Hero() {
         </div>
       </section>
 
-      {/* Main Large Hero Video */}
-      <section className="px-4 sm:px-6 lg:px-8 pb-20">
-        <VideoCard />
-      </section>
+      {/* Campus Events & Highlights Section */}
+      <EventsHighlightsSection />
 
       {/* Inspirational Message Section */}
       <section className="py-16 bg-white border-y border-slate-100">
@@ -1015,61 +1013,409 @@ export function Hero() {
   );
 }
 
-// ── Custom Video Component ──────────────────────────────────────────────────
-function VideoCard() {
-  const cursorRef = useRef<HTMLDivElement>(null);
-  const [isMuted, setIsMuted] = useState(true);
-  const [isHoveringVideo, setIsHoveringVideo] = useState(false);
+// ── Campus Events & Highlights Component ─────────────────────────────────────
+const EVENT_HIGHLIGHTS = [
+  { id: 1, src: "/events/event-1.jpeg", title: "Inaugural Ceremony", tag: "Induction Program", desc: "Ceremonial opening and lamp lighting for the new academic batch" },
+  { id: 2, src: "/events/event-2.jpeg", title: "Dignitaries & Mentors", tag: "Induction Program", desc: "Esteemed guests, management and faculty guiding student futures" },
+  { id: 3, src: "/events/event-3.jpeg", title: "Orientation Address", tag: "Induction Program", desc: "Inspiring address on engineering excellence, discipline and innovation" },
+  { id: 4, src: "/events/event-4.jpeg", title: "Student Gathering", tag: "Campus Life", desc: "Enthusiastic freshers joining together as the new engineering fraternity" },
+  { id: 5, src: "/events/event-5.jpeg", title: "Mega Blood Donation Camp", tag: "Blood Donation", desc: "Annual voluntary blood donation drive organized on campus" },
+  { id: 6, src: "/events/event-6.jpeg", title: "Medical Staff & Coordination", tag: "Blood Donation", desc: "Certified healthcare professionals and student volunteers ensuring safe donation" },
+  { id: 7, src: "/events/event-7.jpeg", title: "Youth For A Cause", tag: "Social Impact", desc: "Students proudly stepping forward to save lives through voluntary donation" },
+  { id: 8, src: "/events/event-8.jpeg", title: "Faculty & Staff Donors", tag: "Community Service", desc: "Faculty members actively contributing to the life-saving initiative" },
+  { id: 9, src: "/events/event-9.jpeg", title: "Donor Appreciation", tag: "Recognition", desc: "Awarding certificates of honor and appreciation to selfless donors" },
+  { id: 10, src: "/events/event-10.jpeg", title: "Humanitarian Outreach", tag: "Social Impact", desc: "Fostering empathy, civic responsibility, and community health" },
+  { id: 11, src: "/events/event-11.jpeg", title: "Memorable Campus Moments", tag: "Campus Life", desc: "Cherished moments marking the energetic beginning of college life" },
+  { id: 12, src: "/events/event-12.jpeg", title: "Event Commemoration", tag: "Highlights", desc: "Celebrating successful completion of induction and healthcare drive" },
+];
 
+function EventsHighlightsSection() {
+  const [activeModalIndex, setActiveModalIndex] = useState<number | null>(null);
+  const [isPaused, setIsPaused] = useState(false);
+  const [scrollDirection, setScrollDirection] = useState<"left" | "right">("right");
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+
+  // Close lightbox on Escape key, navigate with Left/Right arrows
   useEffect(() => {
-    const moveCursor = (e: MouseEvent) => {
-      if (cursorRef.current) {
-        cursorRef.current.style.left = `${e.clientX}px`;
-        cursorRef.current.style.top = `${e.clientY}px`;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (activeModalIndex === null) return;
+      if (e.key === "Escape") {
+        setActiveModalIndex(null);
+      } else if (e.key === "ArrowLeft") {
+        setActiveModalIndex((prev) => 
+          prev !== null ? (prev === 0 ? EVENT_HIGHLIGHTS.length - 1 : prev - 1) : null
+        );
+      } else if (e.key === "ArrowRight") {
+        setActiveModalIndex((prev) => 
+          prev !== null ? (prev === EVENT_HIGHLIGHTS.length - 1 ? 0 : prev + 1) : null
+        );
       }
     };
-    if (isHoveringVideo) {
-      window.addEventListener("mousemove", moveCursor);
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [activeModalIndex]);
+
+  // Touch swipe support for mobile lightbox
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStartX(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX === null || activeModalIndex === null) return;
+    const touchEndX = e.changedTouches[0].clientX;
+    const diff = touchStartX - touchEndX;
+
+    if (diff > 50) {
+      // Swiped left -> Next
+      setActiveModalIndex((prev) => 
+        prev !== null ? (prev === EVENT_HIGHLIGHTS.length - 1 ? 0 : prev + 1) : null
+      );
+    } else if (diff < -50) {
+      // Swiped right -> Prev
+      setActiveModalIndex((prev) => 
+        prev !== null ? (prev === 0 ? EVENT_HIGHLIGHTS.length - 1 : prev - 1) : null
+      );
     }
-    return () => window.removeEventListener("mousemove", moveCursor);
-  }, [isHoveringVideo]);
+    setTouchStartX(null);
+  };
 
   return (
-    <div 
-      className="relative w-full rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white bg-[#0a192f] flex items-center justify-center cursor-none group aspect-video sm:aspect-auto"
-      onMouseEnter={() => setIsHoveringVideo(true)}
-      onMouseLeave={() => setIsHoveringVideo(false)}
-      onClick={() => setIsMuted(!isMuted)}
-    >
-      <video
-        src="/videos/video.mp4"
-        autoPlay
-        loop
-        muted={isMuted}
-        playsInline
-        className="w-full h-auto object-cover"
-      />
-      
-      {/* Custom Cursor */}
-      {isHoveringVideo && (
+    <section id="events" className="px-3 sm:px-6 lg:px-8 pb-16 sm:pb-20 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto mb-6 sm:mb-12">
+        {/* Section Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-5 sm:gap-6 pb-6 border-b border-slate-200">
+          <div>
+            {/* Category Eyebrow Badge */}
+            <div className="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-[#d4af37]/15 border border-[#d4af37]/40 text-[#0a192f] text-[11px] sm:text-xs font-bold tracking-widest uppercase mb-2.5 sm:mb-3 shadow-xs">
+              <span className="w-2 h-2 rounded-full bg-[#d4af37] animate-ping" />
+              <Sparkles className="w-3.5 h-3.5 text-[#d4af37]" />
+              Campus Highlights
+            </div>
+
+            {/* Main Header: Events */}
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-black text-[#0a192f] tracking-tight">
+              Events
+            </h2>
+
+            {/* Sub-header: Induction Program & Blood Donation */}
+            <h3 className="text-lg sm:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-[#0a192f] via-[#d4af37] to-[#dc2626] bg-clip-text text-transparent mt-1.5 leading-snug">
+              Induction Program &amp; Blood Donation
+            </h3>
+
+            {/* Highlights Narrative */}
+            <p className="text-slate-600 text-xs sm:text-base max-w-2xl mt-2.5 sm:mt-3 leading-relaxed">
+              Explore key moments and vibrant campus life at AGMR. Our latest highlights showcase the welcoming of new engineering students during the Induction Program alongside our humanitarian Blood Donation Camp organized by students and faculty.
+            </p>
+          </div>
+
+          {/* Quick Badges & Controls */}
+          <div className="flex flex-col sm:flex-row md:flex-col items-start md:items-end gap-2.5 sm:gap-3">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-red-50 border border-red-200 text-red-700 text-[11px] sm:text-xs font-semibold">
+                <Heart className="w-3.5 h-3.5 fill-red-500 text-red-500" />
+                Blood Donation Drive
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-amber-50 border border-amber-200 text-amber-800 text-[11px] sm:text-xs font-semibold">
+                <Calendar className="w-3.5 h-3.5 text-[#d4af37]" />
+                Induction 2026
+              </span>
+            </div>
+
+            <div className="flex items-center gap-2 text-xs text-slate-500">
+              {/* Direction Toggle */}
+              <button
+                type="button"
+                onClick={() => setScrollDirection(scrollDirection === "left" ? "right" : "left")}
+                className="inline-flex items-center gap-1 sm:gap-1.5 px-2.5 py-1.5 sm:px-3 sm:py-1.5 rounded-full border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-medium transition-all shadow-xs cursor-pointer active:scale-95"
+                title={`Switch scroll direction (Current: ${scrollDirection === "right" ? "Left to Right" : "Right to Left"})`}
+              >
+                {scrollDirection === "right" ? (
+                  <>
+                    <ChevronRight className="w-3.5 h-3.5 text-[#d4af37]" />
+                    <span>Scroll Right ➔</span>
+                  </>
+                ) : (
+                  <>
+                    <ChevronLeft className="w-3.5 h-3.5 text-[#d4af37]" />
+                    <span>Scroll Left ⬅</span>
+                  </>
+                )}
+              </button>
+
+              {/* Pause/Play Toggle */}
+              <button
+                type="button"
+                onClick={() => setIsPaused(!isPaused)}
+                className="inline-flex items-center gap-1 sm:gap-1.5 px-2.5 py-1.5 sm:px-3 sm:py-1.5 rounded-full border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-medium transition-all shadow-xs cursor-pointer active:scale-95"
+                title={isPaused ? "Resume auto-scroll" : "Pause auto-scroll"}
+              >
+                {isPaused ? (
+                  <>
+                    <Play className="w-3.5 h-3.5 text-emerald-600 fill-emerald-600" />
+                    <span>Play</span>
+                  </>
+                ) : (
+                  <>
+                    <Pause className="w-3.5 h-3.5 text-slate-600" />
+                    <span>Pause</span>
+                  </>
+                )}
+              </button>
+              <span className="hidden lg:inline text-[11px] text-slate-400">
+                Hover to inspect
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Marquee Animation Styles for Continuous Scrolling */}
+      <style dangerouslySetInnerHTML={{__html: `
+        @keyframes event-scroll-right {
+          0% {
+            transform: translateX(-50%);
+          }
+          100% {
+            transform: translateX(0%);
+          }
+        }
+        @keyframes event-scroll-left {
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        .animate-event-right {
+          animation: event-scroll-right 45s linear infinite;
+        }
+        .animate-event-left {
+          animation: event-scroll-left 45s linear infinite;
+        }
+        .animate-event-right.is-paused,
+        .animate-event-left.is-paused,
+        .animate-event-right:hover,
+        .animate-event-left:hover {
+          animation-play-state: paused;
+        }
+      `}} />
+
+      {/* Scrolling Strip Container with Mobile Touch Support */}
+      <div 
+        className="relative w-full overflow-hidden py-3 rounded-2xl sm:rounded-3xl bg-gradient-to-b from-slate-50/70 to-slate-100/40 p-2 sm:p-4 border border-slate-200/60 shadow-inner"
+        onTouchStart={() => setIsPaused(true)}
+      >
+        {/* Soft edge fade overlays */}
+        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-8 sm:w-24 bg-gradient-to-r from-white via-white/80 to-transparent z-10" />
+        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-8 sm:w-24 bg-gradient-to-l from-white via-white/80 to-transparent z-10" />
+
+        {/* Marquee Strip: 2 duplicate sets side-by-side */}
         <div 
-          ref={cursorRef}
-          className="fixed pointer-events-none z-[100] flex flex-col items-center justify-center w-20 h-20 bg-[#d4af37]/90 text-white rounded-full font-bold text-[10px] uppercase tracking-widest shadow-2xl backdrop-blur-sm transition-transform duration-100 ease-out"
-          style={{ transform: 'translate(-50%, -50%)' }}
+          className={`flex items-center w-max ${
+            scrollDirection === "right" ? "animate-event-right" : "animate-event-left"
+          } ${isPaused ? "is-paused" : ""}`}
         >
-          {isMuted ? (
-            <>
-              <VolumeX className="w-5 h-5 mb-1" />
-              Unmute
-            </>
-          ) : (
-            <>
-              <Volume2 className="w-5 h-5 mb-1" />
-              Mute
-            </>
-          )}
+          {/* First Set of all 12 Images */}
+          <div className="flex items-center gap-4 sm:gap-6 pr-4 sm:pr-6">
+            {EVENT_HIGHLIGHTS.map((item, index) => (
+              <div
+                key={`set1-${item.id}`}
+                onClick={() => setActiveModalIndex(index)}
+                className="group relative flex-shrink-0 w-[260px] sm:w-[360px] md:w-[400px] h-[195px] sm:h-[260px] rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5 border-2 border-white bg-slate-200 cursor-pointer active:scale-[0.98]"
+              >
+                <Image
+                  src={item.src}
+                  alt={item.title}
+                  fill
+                  unoptimized
+                  priority
+                  className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                />
+
+                {/* Top Badges */}
+                <div className="absolute top-2.5 inset-x-2.5 sm:top-3 sm:inset-x-3 flex items-center justify-between pointer-events-none z-10">
+                  <span className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full bg-[#0a192f]/85 backdrop-blur-md text-white text-[10px] sm:text-[11px] font-semibold border border-white/20 shadow-xs">
+                    Highlight #{String(item.id).padStart(2, "0")}
+                  </span>
+                  <span className={`px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full text-[10px] sm:text-[11px] font-bold shadow-xs backdrop-blur-md ${
+                    item.tag === "Blood Donation" 
+                      ? "bg-red-600/90 text-white" 
+                      : item.tag === "Induction Program"
+                      ? "bg-[#d4af37]/90 text-[#0a192f]"
+                      : "bg-[#0a192f]/80 text-[#d4af37]"
+                  }`}>
+                    {item.tag}
+                  </span>
+                </div>
+
+                {/* Bottom Details Overlay */}
+                <div className="absolute inset-x-0 bottom-0 p-3 sm:p-4 bg-gradient-to-t from-black/90 via-black/55 to-transparent text-white flex items-end justify-between gap-2 sm:gap-3 z-10">
+                  <div className="min-w-0 flex-1">
+                    <h4 className="text-xs sm:text-base font-bold text-white group-hover:text-[#d4af37] transition-colors line-clamp-1 drop-shadow-sm">
+                      {item.title}
+                    </h4>
+                    <p className="text-[10px] sm:text-xs text-slate-300 line-clamp-1 mt-0.5">
+                      {item.desc}
+                    </p>
+                  </div>
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white group-hover:bg-[#d4af37] group-hover:text-[#0a192f] transition-all flex-shrink-0 shadow-sm">
+                    <Eye className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Second Duplicate Set for Continuous Seamless Loop */}
+          <div className="flex items-center gap-4 sm:gap-6 pr-4 sm:pr-6">
+            {EVENT_HIGHLIGHTS.map((item, index) => (
+              <div
+                key={`set2-${item.id}`}
+                onClick={() => setActiveModalIndex(index)}
+                className="group relative flex-shrink-0 w-[260px] sm:w-[360px] md:w-[400px] h-[195px] sm:h-[260px] rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5 border-2 border-white bg-slate-200 cursor-pointer active:scale-[0.98]"
+              >
+                <Image
+                  src={item.src}
+                  alt={item.title}
+                  fill
+                  unoptimized
+                  priority
+                  className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                />
+
+                {/* Top Badges */}
+                <div className="absolute top-2.5 inset-x-2.5 sm:top-3 sm:inset-x-3 flex items-center justify-between pointer-events-none z-10">
+                  <span className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full bg-[#0a192f]/85 backdrop-blur-md text-white text-[10px] sm:text-[11px] font-semibold border border-white/20 shadow-xs">
+                    Highlight #{String(item.id).padStart(2, "0")}
+                  </span>
+                  <span className={`px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full text-[10px] sm:text-[11px] font-bold shadow-xs backdrop-blur-md ${
+                    item.tag === "Blood Donation" 
+                      ? "bg-red-600/90 text-white" 
+                      : item.tag === "Induction Program"
+                      ? "bg-[#d4af37]/90 text-[#0a192f]"
+                      : "bg-[#0a192f]/80 text-[#d4af37]"
+                  }`}>
+                    {item.tag}
+                  </span>
+                </div>
+
+                {/* Bottom Details Overlay */}
+                <div className="absolute inset-x-0 bottom-0 p-3 sm:p-4 bg-gradient-to-t from-black/90 via-black/55 to-transparent text-white flex items-end justify-between gap-2 sm:gap-3 z-10">
+                  <div className="min-w-0 flex-1">
+                    <h4 className="text-xs sm:text-base font-bold text-white group-hover:text-[#d4af37] transition-colors line-clamp-1 drop-shadow-sm">
+                      {item.title}
+                    </h4>
+                    <p className="text-[10px] sm:text-xs text-slate-300 line-clamp-1 mt-0.5">
+                      {item.desc}
+                    </p>
+                  </div>
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white group-hover:bg-[#d4af37] group-hover:text-[#0a192f] transition-all flex-shrink-0 shadow-sm">
+                    <Eye className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Interactive Lightbox Modal for Inspecting Event Highlights (Fully Responsive with Touch Swipe) */}
+      {activeModalIndex !== null && (
+        <div 
+          className="fixed inset-0 z-[999] bg-black/90 backdrop-blur-md flex items-center justify-center p-3 sm:p-6"
+          onClick={() => setActiveModalIndex(null)}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
+          <div 
+            className="relative max-w-5xl w-full max-h-[92vh] bg-[#0a192f] rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl flex flex-col"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Header */}
+            <div className="flex items-center justify-between px-4 py-3 sm:px-6 sm:py-4 border-b border-slate-800 bg-[#0a192f]/95">
+              <div className="flex items-center gap-2 sm:gap-3">
+                <span className="px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-[#d4af37] text-[#0a192f] text-[10px] sm:text-xs font-bold uppercase tracking-wider">
+                  Highlight {String(EVENT_HIGHLIGHTS[activeModalIndex].id).padStart(2, "0")} / {EVENT_HIGHLIGHTS.length}
+                </span>
+                <span className="text-slate-300 text-[11px] sm:text-sm font-medium">
+                  {EVENT_HIGHLIGHTS[activeModalIndex].tag}
+                </span>
+              </div>
+
+              {/* Close Button */}
+              <button 
+                type="button"
+                onClick={() => setActiveModalIndex(null)}
+                className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-slate-800 hover:bg-slate-700 text-white flex items-center justify-center transition-colors cursor-pointer"
+                title="Close (Esc)"
+              >
+                <X className="w-4 h-4 sm:w-5 sm:h-5" />
+              </button>
+            </div>
+
+            {/* Modal Image Area */}
+            <div className="relative w-full h-[45vh] sm:h-[60vh] md:h-[65vh] bg-black flex items-center justify-center">
+              <Image 
+                src={EVENT_HIGHLIGHTS[activeModalIndex].src} 
+                alt={EVENT_HIGHLIGHTS[activeModalIndex].title}
+                fill
+                unoptimized
+                priority
+                className="object-contain"
+              />
+
+              {/* Prev Button */}
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setActiveModalIndex(
+                    activeModalIndex === 0 ? EVENT_HIGHLIGHTS.length - 1 : activeModalIndex - 1
+                  );
+                }}
+                className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-black/60 hover:bg-[#d4af37] text-white hover:text-[#0a192f] backdrop-blur-md flex items-center justify-center transition-all shadow-lg cursor-pointer z-10"
+                title="Previous Highlight (←)"
+              >
+                <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
+              </button>
+
+              {/* Next Button */}
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setActiveModalIndex(
+                    activeModalIndex === EVENT_HIGHLIGHTS.length - 1 ? 0 : activeModalIndex + 1
+                  );
+                }}
+                className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-black/60 hover:bg-[#d4af37] text-white hover:text-[#0a192f] backdrop-blur-md flex items-center justify-center transition-all shadow-lg cursor-pointer z-10"
+                title="Next Highlight (→)"
+              >
+                <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
+              </button>
+            </div>
+
+            {/* Modal Footer Description */}
+            <div className="px-4 py-3 sm:px-6 sm:py-4 bg-[#071322] border-t border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-2">
+              <div>
+                <h3 className="text-sm sm:text-lg font-bold text-white">
+                  {EVENT_HIGHLIGHTS[activeModalIndex].title}
+                </h3>
+                <p className="text-slate-400 text-[11px] sm:text-sm mt-0.5">
+                  {EVENT_HIGHLIGHTS[activeModalIndex].desc}
+                </p>
+              </div>
+              <p className="text-[10px] sm:text-[11px] text-slate-500 whitespace-nowrap">
+                <span className="sm:hidden">Swipe or tap arrows ‹ › to browse</span>
+                <span className="hidden sm:inline">Use arrow keys ← → to browse • Esc to close</span>
+              </p>
+            </div>
+          </div>
         </div>
       )}
-    </div>
+    </section>
   );
 }
+
